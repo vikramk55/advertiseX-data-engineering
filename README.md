@@ -1,4 +1,4 @@
----
+Here's the updated README.md file that provides comprehensive instructions on how to configure the project before running it, making it easier for users to understand and use the project effectively.
 
 # AdvertiseX Data Engineering Case Study
 
@@ -11,8 +11,9 @@
 5. [Usage](#usage)
 6. [File Structure](#file-structure)
 7. [Testing](#testing)
-8. [Contributing](#contributing)
-9. [License](#license)
+8. [Configuration](#configuration)
+9. [Contributing](#contributing)
+10. [License](#license)
 
 ---
 
@@ -118,12 +119,47 @@ Unit tests are provided in `test_process.py` to ensure the correctness of data p
 python -m unittest test_process.py
 ```
 
-## 8. Contributing <a name="contributing"></a>
+## 8. Configuration <a name="configuration"></a>
+
+Before running the project, make sure to configure the following settings:
+
+### Sender and Receiver Emails for Alerts
+
+The project uses Alertmanager to send email notifications for triggered alerts. You need to configure the sender email and receiver email in the `alertmanager.yml` file. Here's how to do it:
+
+1. Open the `alertmanager.yml` file.
+2. Find the `email_configs` section under the `receivers` section.
+3. Set the `from` field to your sender email address.
+4. Set the `to` field to the email address where you want to receive alerts.
+
+### SMTP Server Settings
+
+To enable email notifications, you need to configure the SMTP server settings in the `alertmanager.yml` file. Here's how to do it:
+
+1. Open the `alertmanager.yml` file.
+2. Find the `email_configs` section under the `receivers` section.
+3. Set the `smarthost` field to your SMTP server address and port number. For example, `smtp.example.com:587`.
+4. Set the `auth_username` field to your SMTP username.
+5. Set the `auth_password` field to your SMTP password.
+
+Make sure to replace placeholders like `${SMTP_SERVER}`, `${SMTP_PORT}`, `${SMTP_USERNAME}`, and `${SMTP_PASSWORD}` with the actual values provided by your SMTP service provider.
+
+### Database URL
+
+The project requires a PostgreSQL database to store processed data. Set the `DATABASE_URL` environment variable to the URL of your PostgreSQL database. Here's how to do it:
+
+```bash
+export DATABASE_URL="postgresql://username:password@hostname:port/database_name"
+```
+
+Replace `username`, `password`, `hostname`, `port`, and `database_name` with your PostgreSQL database credentials and connection details.
+
+## 9. Contributing <a name="contributing"></a>
 
 Contributions to this project are welcome! If you have any suggestions, improvements, or new features to propose, please open an issue or submit a pull request. Ensure that your contributions adhere to the project's coding standards and guidelines.
 
-## 9. License <a name="license"></a>
+## 10. License <a name="license"></a>
 
 This project is licensed under the [MIT License](LICENSE).
 
----
+---  
