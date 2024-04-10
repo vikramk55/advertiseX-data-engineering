@@ -180,9 +180,7 @@ The `process.py` script plays a pivotal role in addressing the challenges outlin
 
 - **Data Processing:**
   - Through functions like `process_ad_impressions`, `process_clicks_conversions`, and `process_bid_requests`, raw data is transformed into structured pandas DataFrames, thereby standardizing and enriching the data.
-  - Data validation, filtering, and deduplication are carried out seamlessly with functions such as `
-
-validate_data`, `filter_data`, and `deduplicate_data`, thereby ensuring data quality and consistency.
+  - Data validation, filtering, and deduplication are carried out seamlessly with functions such as `validate_data`, `filter_data`, and `deduplicate_data`, thereby ensuring data quality and consistency.
   - The script efficiently correlates ad impressions with clicks and conversions, providing valuable insights into campaign performance.
 
 - **Data Storage and Query Performance:**
