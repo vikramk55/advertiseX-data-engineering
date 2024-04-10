@@ -52,7 +52,7 @@ Follow the steps below to install and set up the project on your local machine:
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/advertiseX-data-engineering.git
+git clone https://github.com/vikramk55/advertiseX-data-engineering.git
 cd advertiseX-data-engineering
 ```
 
