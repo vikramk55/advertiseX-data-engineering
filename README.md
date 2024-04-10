@@ -1,4 +1,4 @@
-Here's the updated README.md file that provides comprehensive instructions on how to configure the project before running it, making it easier for users to understand and use the project effectively.
+Here's the README.md file that provides comprehensive instructions on how to configure the project before running it, making it easier for users to understand and use the project effectively.
 
 # AdvertiseX Data Engineering Case Study
 
