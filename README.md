@@ -14,7 +14,7 @@ Here's the README.md file that provides comprehensive instructions on how to con
  8. [Configuration](#configuration)
  9. [External Dependencies](#external-dependencies)
 10. [Detailed Documentation for Each File](#detailed-documentation)
-11. [Contributing](#contributing)
+11. [Contributions](#contributions)
 12. [License](#license)
 
 ---
@@ -363,7 +363,7 @@ The `prometheus.yml` configuration file plays a pivotal role in enabling scalabl
 
 Overall, the `prometheus.yml` configuration aligns with project requirements by facilitating scalable data ingestion, performance optimization, and effective error handling and monitoring through alerting rules, thereby contributing to the reliability, integrity, and performance of the data processing infrastructure for AdvertiseX.
 
-## 11. Contributing <a name="contributing"></a>
+## 11. Contributions <a name="contributions"></a>
 
 Contributions to this project are welcome! If you have any suggestions, improvements, or new features to propose, please open an issue or submit a pull request. Ensure that your contributions adhere to the project's coding standards and guidelines.
 
