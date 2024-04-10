@@ -1,0 +1,94 @@
+groups:
+- name: data_processing_alerts
+  rules:
+  - alert: HighAdImpressionsAnomaly
+    expr: increase(ad_impressions_total[5m]) > 1000
+    for: 5m
+    labels:
+      severity: warning
+    annotations:
+      summary: High Ad Impressions Anomaly Detected
+      description: The rate of ad impressions has significantly increased, indicating a potential anomaly.
+
+  - alert: HighClickConversionRate
+    expr: increase(clicks_total[5m]) / increase(ad_impressions_total[5m]) > 0.1
+    for: 5m
+    labels:
+      severity: critical
+    annotations:
+      summary: High Click-Through Rate
+      description: The click-through rate has exceeded the threshold, indicating a high engagement level.
+
+  - alert: HighBidRequestFailureRate
+    expr: 1 - increase(successful_bid_requests_total[5m]) / increase(total_bid_requests_total[5m]) > 0.05
+    for: 10m
+    labels:
+      severity: critical
+    annotations:
+      summary: High Bid Request Failure Rate
+      description: The percentage of failed bid requests has surpassed the acceptable threshold.
+
+  - alert: DataValidationFailure
+    expr: data_validation_errors_total > 0
+    for: 5m
+    labels:
+      severity: warning
+    annotations:
+      summary: Data Validation Failure
+      description: Data validation errors have been detected, indicating potential data quality issues.
+
+  - alert: ProcessingPipelineBottleneck
+    expr: process_duration_seconds > 1.5
+    for: 5m
+    labels:
+      severity: warning
+    annotations:
+      summary: Processing Pipeline Bottleneck
+      description: The processing pipeline is experiencing delays, possibly due to resource constraints.
+
+  # Additional alerts
+
+  - alert: HighStorageUtilization
+    expr: storage_utilization > 90
+    for: 5m
+    labels:
+      severity: critical
+    annotations:
+      summary: High Storage Utilization
+      description: The storage utilization has exceeded the threshold, indicating the need for additional resources.
+
+  - alert: HighCPUMemoryUsage
+    expr: cpu_usage > 90 or memory_usage > 90
+    for: 5m
+    labels:
+      severity: critical
+    annotations:
+      summary: High CPU/Memory Usage
+      description: CPU or memory usage has reached critical levels, potentially impacting performance.
+
+  - alert: DataIngestionFailure
+    expr: data_ingestion_errors_total > 0
+    for: 5m
+    labels:
+      severity: critical
+    annotations:
+      summary: Data Ingestion Failure
+      description: Data ingestion errors have been detected, indicating a disruption in data processing.
+
+  - alert: DatabaseConnectionIssues
+    expr: database_connection_errors_total > 0
+    for: 5m
+    labels:
+      severity: critical
+    annotations:
+      summary: Database Connection Issues
+      description: Connection errors have been detected with the database, impacting data availability.
+
+  - alert: SlowQueryExecution
+    expr: query_execution_time_seconds > 5
+    for: 5m
+    labels:
+      severity: warning
+    annotations:
+      summary: Slow Query Execution
+      description: Query execution time has exceeded the threshold, impacting query responsiveness.

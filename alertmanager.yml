@@ -1,0 +1,18 @@
+global:
+  resolve_timeout: 5m
+
+route:
+  group_by: ['alertname']
+  group_wait: 10s
+  group_interval: 10m
+  repeat_interval: 1h
+  receiver: 'email_notifications'
+
+receivers:
+- name: 'email_notifications'
+  email_configs:
+  - to: 'testreceiveralert@gmail.com'
+    from: 'testalertsender@gmail.com'
+    smarthost: '${SMTP_SERVER}:${SMTP_PORT}'
+    auth_username: '${SMTP_USERNAME}'
+    auth_password: '${SMTP_PASSWORD}'
