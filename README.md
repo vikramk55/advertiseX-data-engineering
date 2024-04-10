@@ -12,8 +12,9 @@ Here's the updated README.md file that provides comprehensive instructions on ho
 6. [File Structure](#file-structure)
 7. [Testing](#testing)
 8. [Configuration](#configuration)
-9. [Contributing](#contributing)
-10. [License](#license)
+9. [External Dependencies](#external-dependencies)
+10. [Contributing](#contributing)
+11. [License](#license)
 
 ---
 
@@ -98,7 +99,8 @@ advertiseX-data-engineering/
 ├── data/
 │   ├── ad_impressions.json
 │   ├── clicks_conversions.csv
-│   └── bid_requests.avro
+│   ├── bid_requests.avro
+│   └── GeoLite2-Country.mmdb   <!-- GeoLite2-Country.mmdb is included here -->
 ├── prometheus.yml
 ├── alertmanager.yml
 ├── alert.rules.yml
@@ -139,7 +141,9 @@ To enable email notifications, you need to configure the SMTP server settings in
 1. Open the `alertmanager.yml` file.
 2. Find the `email_configs` section under the `receivers` section.
 3. Set the `smarthost` field to your SMTP server address and port number. For example, `smtp.example.com:587`.
-4. Set the `auth_username` field to your SMTP username.
+4. Set the `auth_username` field
+
+ to your SMTP username.
 5. Set the `auth_password` field to your SMTP password.
 
 Make sure to replace placeholders like `${SMTP_SERVER}`, `${SMTP_PORT}`, `${SMTP_USERNAME}`, and `${SMTP_PASSWORD}` with the actual values provided by your SMTP service provider.
@@ -154,12 +158,18 @@ export DATABASE_URL="postgresql://username:password@hostname:port/database_name"
 
 Replace `username`, `password`, `hostname`, `port`, and `database_name` with your PostgreSQL database credentials and connection details.
 
-## 9. Contributing <a name="contributing"></a>
+## 9. External Dependencies <a name="external-dependencies"></a>
+
+### GeoLite2-Country.mmdb
+
+The project utilizes the GeoLite2-Country database file `GeoLite2-Country.mmdb` to extract user country information from IP addresses. This file is located in the `data/` directory of the project. It is crucial for the functionality of the `process.py` script, specifically in the `get_country_from_ip` method of the `DataProcessor` class.
+
+## 10. Contributing <a name="contributing"></a>
 
 Contributions to this project are welcome! If you have any suggestions, improvements, or new features to propose, please open an issue or submit a pull request. Ensure that your contributions adhere to the project's coding standards and guidelines.
 
-## 10. License <a name="license"></a>
+## 11. License <a name="license"></a>
 
 This project is licensed under the [MIT License](LICENSE).
 
----  
+---
