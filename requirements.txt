@@ -1,0 +1,4 @@
+pandas==1.3.3
+geoip2==4.1.0
+sqlalchemy==1.4.25
+fastavro==1.4.4
