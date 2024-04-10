@@ -4,18 +4,18 @@ Here's the updated README.md file that provides comprehensive instructions on ho
 
 ## Table of Contents
 
-1. [Introduction](#introduction)
-2. [Project Purpose](#project-purpose)
-3. [System Requirements](#system-requirements)
-4. [Installation Instructions](#installation-instructions)
-5. [Usage](#usage)
-6. [File Structure](#file-structure)
-7. [Testing](#testing)
-8. [Configuration](#configuration)
-9. [External Dependencies](#external-dependencies)
-10. [Contributing](#contributing)
-11. [License](#license)
-12. [Detailed Documentation for Each File](#detailed-documentation)
+ 1. [Introduction](#introduction)
+ 2. [Project Purpose](#project-purpose)
+ 3. [System Requirements](#system-requirements)
+ 4. [Installation Instructions](#installation-instructions)
+ 5. [Usage](#usage)
+ 6. [File Structure](#file-structure)
+ 7. [Testing](#testing)
+ 8. [Configuration](#configuration)
+ 9. [External Dependencies](#external-dependencies)
+10. [Detailed Documentation for Each File](#detailed-documentation)
+11. [Contributing](#contributing)
+12. [License](#license)
 
 ---
 
@@ -168,17 +168,8 @@ The project utilizes the GeoLite2-Country database file `GeoLite2-Country.mmdb` 
 Ensure that you have downloaded and placed the `GeoLite2-Country.mmdb` file in the data/ directory before running the process.py script.
 You may need to periodically update this database file to ensure accurate geolocation data.
 
-## 10. Contributing <a name="contributing"></a>
 
-Contributions to this project are welcome! If you have any suggestions, improvements, or new features to propose, please open an issue or submit a pull request. Ensure that your contributions adhere to the project's coding standards and guidelines.
-
-## 11. License <a name="license"></a>
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-## 12. Detailed Documentation for Each File <a name="detailed-documentation"></a>
+## 10. Detailed Documentation for Each File <a name="detailed-documentation"></a>
 
 ### 1. process.py
 
@@ -371,3 +362,11 @@ The `prometheus.yml` configuration file plays a pivotal role in enabling scalabl
   - Alerting rules defined in `alert.rules.yml` enable Prometheus to detect anomalies, discrepancies, or delays in collected data and trigger alerts accordingly. Alerts are sent to the specified Alertmanager for further processing and notification.
 
 Overall, the `prometheus.yml` configuration aligns with project requirements by facilitating scalable data ingestion, performance optimization, and effective error handling and monitoring through alerting rules, thereby contributing to the reliability, integrity, and performance of the data processing infrastructure for AdvertiseX.
+
+## 11. Contributing <a name="contributing"></a>
+
+Contributions to this project are welcome! If you have any suggestions, improvements, or new features to propose, please open an issue or submit a pull request. Ensure that your contributions adhere to the project's coding standards and guidelines.
+
+## 12. License <a name="license"></a>
+
+This project is licensed under the [MIT License](LICENSE).
